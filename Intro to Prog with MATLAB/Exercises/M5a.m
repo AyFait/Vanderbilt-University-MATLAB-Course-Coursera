@@ -10,7 +10,7 @@ M %get a view of M
 [m,n] = size(M) %the rxc of M
 row_1 = M(1, :); %get the 1st row
 
-%mmr = (max(M, [], 2)-min(M, [], 2))';
+%mmr = abs(max(M, [], 2)-min(M, [], 2))';
 mmr_max = max(M, [], 2);  % column vector: max of each row
 mmr_min = min(M, [], 2); % column vector: min of each row
 mmr = abs(mmr_max-mmr_min)'; % transpose to get a row vector
