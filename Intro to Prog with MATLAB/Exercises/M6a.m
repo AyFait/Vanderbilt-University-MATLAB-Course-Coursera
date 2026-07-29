@@ -6,7 +6,7 @@ See the examples below to see how picker works in practice.
 %}
 
 function out = picker(condition, in1, in2)
-if condition
+if condition %is condition true/false or 1/0 (no need for assignment operator)
     out = in1;
     
 else
