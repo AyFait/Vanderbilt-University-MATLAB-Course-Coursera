@@ -1,4 +1,5 @@
 %{
+Sliding window sums:
 Write a function called max_sum that takes v, a row vector of numbers, and n, a positive integer as inputs. 
 The function needs to find the n consecutive elements of v whose sum
 is the largest possible. 
