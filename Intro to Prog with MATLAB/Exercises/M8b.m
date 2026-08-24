@@ -6,6 +6,38 @@ element of the sparse matrix that has a value other than the default. The three 
 sparse2matrix that takes a single input of a cell vector as defined above and returns the output argument called matrix, the matrix in its traditional form.
 %}
 
+
+function matrix = sparse2matrix(S)
+
+    % Get the size of the matrix.
+    % S{1} contains something like [4 4].
+    sz = S{1};
+
+    % Get the default value.
+    % S{2} contains something like 0.
+    defaultValue = S{2};
+
+    % Create a matrix filled with the default value.
+    matrix = repmat(defaultValue, sz);
+
+    % Start from cell 3 because cells 1 and 2
+    % contain the size and default value.
+    for k = 3:numel(S)
+
+        % Get the current [row column value].
+        entry = S{k};
+
+        % Put the value into the correct position.
+        matrix(entry(1), entry(2)) = entry(3);
+
+    end
+
+end
+
+
+
+%{
+%Advanced Version
 function matrix = sparse2matrix(S)
 %SPARSE2MATRIX Convert a custom sparse representation to a full matrix.
 %
@@ -28,3 +60,4 @@ function matrix = sparse2matrix(S)
         matrix(entry(1), entry(2)) = entry(3);
     end
 end
+%}
