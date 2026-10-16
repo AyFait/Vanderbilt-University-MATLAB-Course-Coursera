@@ -1,5 +1,5 @@
 %{
-Gaussian filter
+Gaussian filter:
 Write a function GaussianFilter that takes as input a [1xN] vector x, which represents a signal, and a scalar sigma. Use the 'conv' function to convolve x with a Gaussian with
 standard deviation sigma. Choose W, the size of the filter, to be 6*sigma, rounding up using 'ceil' to ensure the result is an integer. The function should output the resulting
 signal y. Use the 'same' argument with 'conv' to ensure the output y is the same size as the input x.
